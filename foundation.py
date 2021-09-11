@@ -11,11 +11,13 @@
 # print(tinydict.keys())
 # print(tinydict.values())
 
-# 条件与循环
-a = 1
-while a < 7:
-    if(a % 2 == 0):
-        print(a, "is even")
-    else:
-        print(a, "is odd")
-    a += 1
+# 求质数
+i=2
+while(i<100):
+    j=2
+    while(j<=(i/j)):
+        if not(i%j):break
+        j+=1
+    if(j>i/j):print(str(i)+"是质数")
+    i+=1
+print('goodbye')
