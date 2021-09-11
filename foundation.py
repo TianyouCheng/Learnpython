@@ -1,4 +1,5 @@
 import math
+import time
 # print('hello world 你好世界')
 # #字典，通过键来存取，而不是通过偏移存取
 # dict={}
@@ -24,5 +25,10 @@ import math
 # print('goodbye')
 
 
-#字符串格式化
-print("我叫%s今年%d岁！"%('小明',10))
+# #字符串格式化
+# print("我叫%s今年%d岁！"%('小明',10))
+
+localtime=time.localtime(time.time())#time.time()是时间戳
+readabletime=time.asctime(localtime)#localtime是包含时间信息的9元组
+print("本地时间为："+str(readabletime))
+print(time.strftime("%Y-%m-%d %H:%M:%S"),time.localtime())#strftime是格式化时间的函数
